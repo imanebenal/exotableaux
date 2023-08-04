@@ -1,44 +1,98 @@
-console.log("ca fonctionne");
-//VARIABLES 
-
-// const // non réassignable & portée limitée 
-// let  // réassignable & Portée limtée
-
-
-// Portée de
-const firstname ="imane";
-const lastname="benali";
- function hello(){
-    
-    console.log(firstname);
-    console.log(lastname);
- }
- hello();
+const myAlphabet = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+    "$",
+    "*",
+    "/",
+    "-",
+    "+",
+  ];
  
- //types variables
- //const stringA = "salut"; //string = chaine de caractère ="",'',´´
- //const numberA = 0;// nombre= number = 0
- //let booleanA= true ; //boolean = boolean = true ou false
- //const arrayA= []; //Array=tableau=[]
- //const pbjectA={};// object = objet ={}
+  console.log("Length of myAlphabet array:", + myAlphabet.length);
 
+  function myAlphabetLength() {
+      console.log("Longueur de mon tableau " + myAlphabet.length);
+    }
+myAlphabetLength()
 
- // LES TABLEAUX PLUS PRECISEMENT/
- const fruits =['pomme','Fraise','Mangue', 'Kiwi','Banane'];
- console.log(fruits);
-//les objets plus précisement
-const chats ={
-    nom: "imane",
-    age:23,
-    couleur:["noir","jaune","tigre"],
-    sexe: "female",
-    sterilise: true,
-    puce: undefined,
-};
-console.log(chats)//type objets 
-console.log(chats.nom);//chaine de caractere=string
-console.log(chats.age);
-console.log(chats.couleur);
-console.log(chats.sexe);
-console.log(chats.sterilise);
-console.log(chats.puce);
+const planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
+
+  console.log("List of planets:");
+for (const planet of planets) {
+  console.log(planet);
+}
+console.log("List of planets:");
+
+planets.forEach(function(element, index) {
+    console.log(element, index);
+  });
+  const someDataTypes = [23, "imane , ben ali", true, null];
+console.log(someDataTypes);
+
+console.log("Data Types in someDataTypes array:");
+for (let i = 0; i < someDataTypes.length; i++) {
+  console.log(`Index ${i}:`, typeof someDataTypes[i]);
+}
+
+const emptyArray = [];
+console.log("emptyArray",emptyArray);
+emptyArray.push("imane ben ali");
+emptyArray.push(23);
+emptyArray.push(true);
+emptyArray.push(null);
+emptyArray.push({fruit: 'Ananas', color: 'Yellow' });
+
+console.log("Updated Array:", emptyArray);
+
+const furnitures = ['Table', 'Chairs', 'Couch'];
+
+console.log("Letters in each item of the 'furnitures' array:");
+
+furnitures.forEach((item, index) => {
+  for (let i = 0; i < item.length; i++) {
+    console.log(` Letter ${i}:`, item[i]);
+  }
+});
+
+let values1 = ["Apple", 1, false, "2"];
+let values2 = [`5`, "Fries", 2, true];
+let values3 = ["Mars", "Strawberry", 9];
+
+values1 = values1.filter(item => typeof item === "number");
+values2 = values2.filter( item => typeof item === "number");
+values3 = values3.filter(item => typeof item === "number");
+
+console.log("delete:", values1);
+console.log("delete:", values2);
+console.log("delete:", values3);
+
+let studentCoursesA = ['Math', 'English', 'Programming'];
+let studentCoursesB = ['Geography', 'Spanish', 'Programming'];
+
+let commonwords = studentCoursesA.filter(course => studentCoursesB.includes(course));
+
+console.log("Mots communs :", commonwords);
